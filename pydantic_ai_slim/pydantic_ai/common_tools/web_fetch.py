@@ -148,7 +148,7 @@ class WebFetchLocalTool:
 
 def _convert_html(html: str) -> tuple[str, str]:
     """Return the raw `<title>` text (empty if there is none) and the markdown conversion of the HTML."""
-    return _extract_title(html), md(html, strip=['img', 'script', 'style'])
+    return _extract_title(html), md(html, strip=['img'])
 
 
 def _extract_title(html: str) -> str:
